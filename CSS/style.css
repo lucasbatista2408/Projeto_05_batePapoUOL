@@ -1,0 +1,132 @@
+*{
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+  background-color: #f3f3f3;
+}
+
+.container{
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  background-color: #f3f3f3;
+  max-height: 1100px;
+  height: 100%;
+}
+.layer{
+  max-width: 600px;
+  width: 100%;
+  max-height: 1100px;
+  height: 1000px;
+  background-color: gray;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.90;
+}
+
+.sidebar{
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: white;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.sidebar h1{
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 84px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px
+}
+
+.header {
+  max-width: 600px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 24px;
+  background-color: white;  
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.05);
+}
+
+footer {
+  max-width: 600px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 24px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: 4px -6px 5px rgba(0, 0, 0, 0.05);
+  background-color: white;
+}
+
+button{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+header .img{
+  width: 74px;
+  height: 54px;
+}
+
+
+ion-icon{
+  font-size: 42px;
+}
+
+.chat{
+  width: 100%;
+  background-color: transparent;
+  margin: 86px 0;
+}
+
+input{
+  width: 250px;
+  height: 50px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+}
+::placeholder {
+  font-weight: 400;
+  font-style: italic;
+  color: black
+}
+
+footer ion-icon{
+  font-size: 26px;
+}
+
+.hidden {
+  display: none;
+}
