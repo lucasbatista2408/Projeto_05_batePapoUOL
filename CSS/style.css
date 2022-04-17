@@ -8,6 +8,35 @@ body{
   background-color: #f3f3f3;
 }
 
+.login-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  background-color: #FFFFFF;
+  height: 1100px;
+  z-index: 1;
+  position: absolute;
+}
+
+.loginInfo{
+  width: 260px;
+  height: 54px;
+  margin-top: 94px;
+  font-size: 18px;
+  color: gray;
+}
+.loginInfo::placeholder {
+  font-weight: 400;
+  color: #AEAEAE;
+  text-align: center;
+  font-size: 18px;
+}
+
 .container{
   display: flex;
   font-family: "Roboto", sans-serif;
@@ -107,21 +136,51 @@ ion-icon{
 .chat{
   width: 100%;
   background-color: transparent;
-  margin: 86px 0;
+  margin-top: 86px;
+  padding-bottom: 86px;
+  max-height: 40%;
   height: auto;
+  top: 0;
+  overflow: scroll;
 }
+
+.chat::-webkit-scrollbar {
+  display: none;
+}
+
 .message{
+  padding: 10px 8px;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  background-color: #FFFFFF;
+  min-height: 30px;
 }
-input{
+
+.message-status{
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  background-color: #DCDCDC;
+  height: 30px;
+}
+.from-to{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input .sendMsg{
   width: 250px;
   height: 50px;
   font-size: 18px;
   border: none;
   outline: none;
 }
-::placeholder {
+.sendMsg::placeholder {
   font-weight: 400;
   font-style: italic;
   color: black

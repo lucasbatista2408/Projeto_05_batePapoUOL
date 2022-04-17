@@ -9,7 +9,10 @@
   <title>Document</title>
 </head>
 <body>
-
+  <div class="login-page hidden">
+    <img src="/img/logo 2.svg" alt="">
+    <input class="loginInfo" type="text" id="typeHere" name="type" value="" placeholder="Digite seu Nome">
+  </div>
   <div class="container">
     <div class="layer hidden" onclick="layer(this)"></div>
       <div class="sidebar hidden">
@@ -20,12 +23,13 @@
         <button> <img src="/img/logo 1.svg" alt="logoUOL"> </button>
         <button class="menu"> <ion-icon name="people"></ion-icon> </button>
       </div>
-      <div class="chat"></div>
+      <div class="chat">
+      </div>
       <footer>
         <form action="">
-          <input type="text" id="typeHere" name="type" value="" placeholder="Escreva aqui..."><br>
+          <input class="sendMsg" type="text" id="typeHere" name="type" value="" placeholder="Escreva aqui..."><br>
         </form>
-        <ion-icon name="paper-plane-outline"></ion-icon>
+        <ion-icon onclick="sendMessage()" name="paper-plane-outline"></ion-icon>
       </footer>
   </div>
 
