@@ -37,6 +37,20 @@ body{
   font-size: 18px;
 }
 
+.loginBtn{
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 46px;
+  border-radius: 10px;
+  margin-top: 16px;
+  cursor: pointer;
+  background-color: #E7E7E7;
+  color: #696969;
+}
+
 .container{
   display: flex;
   font-family: "Roboto", sans-serif;
@@ -117,7 +131,13 @@ footer {
   background-color: white;
 }
 
-button{
+.menu{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.logo{
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -173,7 +193,7 @@ ion-icon{
   align-items: center;
   justify-content: center;
 }
-input .sendMsg{
+.sendMsg{
   width: 250px;
   height: 50px;
   font-size: 18px;
@@ -184,6 +204,18 @@ input .sendMsg{
   font-weight: 400;
   font-style: italic;
   color: black
+}
+
+.private-message{
+  padding: 10px 8px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  background-color: #FFDEDE;  ;
+  min-height: 30px;
 }
 
 footer ion-icon{
