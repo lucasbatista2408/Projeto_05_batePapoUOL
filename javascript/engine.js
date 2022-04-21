@@ -14,24 +14,24 @@ function login(){
   hide.classList.add('hidden')
 
   onlineRequest.then(keepOnline);
-  console.log("logou")
   onlineRequest.catch(onlineRequestError);
-
-  function onlineRequestError(request){
-      console.log("logged in")
-  }
 }
+
+function onlineRequestError(error){
+  let add = document.querySelector(".login-page")
+  add.classList.remove('hidden')
+  login()
+}
+
 
 // KEEP ONLINE STAGE
 function keepOnline(){
      const statusOnline = axios.post('https://mock-api.driven.com.br/api/v6/uol/status', {
          name: `${nickname}`
      })
-
      statusOnline.then(requestMensagem);
-     //requestMensagem()
+     setInterval(keepOnline, 5000)
 }
-setInterval(keepOnline, 5000)
 
 // GET MESSAGES
 
@@ -41,29 +41,29 @@ function requestMensagem(){
 
   function getMessage(resposta){
     listMessages = resposta.data;
-    addReceivedMessage()
-    console.log('chamou a function')
+    addReceivedMessage();
   }
 }
 
 
 function addReceivedMessage(){
   let texto = document.querySelector(".chat")
+
   for (i = 0; i < listMessages.length; i++){
     if(listMessages[i].type == 'status'){
       texto.innerHTML += `<div class='message-status'>
       <span><span style="color: lightgray">(${listMessages[i].time})</span> <span style="font-weight: 700;">${listMessages[i].from}</span> ${listMessages[i].text}</span>
-    </div>` 
+      </div>` 
     }
     if(listMessages[i].type == 'message'){
       texto.innerHTML += `<div class='message'>
         <span><span style="color: lightgray">(${listMessages[i].time})</span> <span style="font-weight: 700;">${listMessages[i].from}</span> para <span style="font-weight: 700;">${listMessages[i].to}</span>: ${listMessages[i].text}</span>
-      </div>`
+        </div>`
     }
     if(listMessages[i].type == 'private_message'){
       texto.innerHTML += `<div class='private-message'>
       <span><span style="color: lightgray">(${listMessages[i].time})</span> <span style="font-weight: 700;">${listMessages[i].from}</span> para <span style="font-weight: 700;">${listMessages[i].to}</span>: ${listMessages[i].text}</span>
-    </div>`
+      </div>`
     }
   }
   const lastMessage = document.querySelector('.chat div:last-child');
@@ -73,7 +73,6 @@ function addReceivedMessage(){
 function limparConversa(){
   let chat = document.querySelector(".chat")
   chat.innerHTML = ""
-  addReceivedMessage
 }
 setInterval(limparConversa, 5000)
 
